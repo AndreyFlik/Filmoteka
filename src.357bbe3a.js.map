@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/main.js","index.js"],"names":[],"mappings":";;;AAIA,aAJA,QAAA,kBACA,QAAA,2BAEA,QAAA,YACA,QAAA;;ACFA,aAFA,QAAA,oBAEA,QAAA","file":"src.357bbe3a.js","sourceRoot":"../src","sourcesContent":["import './services/api';\nimport './services/localStorage';\n\nimport './header';\nimport './footer';\n","import './sass/main.scss';\n\nimport './js/main';\n"]}
