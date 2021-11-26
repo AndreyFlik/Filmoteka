@@ -72,17 +72,15 @@
 
 .modal__button {
   position: absolute;
-
-  align-items: center;
-  justify-content: center;
-  display: flex;
-
   top: 10px;
   right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
-
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   background-color: tomato;
 }
 
@@ -123,14 +121,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
 
   text-decoration: none;
 
   color: $primary-text-color;
   @media screen and (min-width: 1024px) {
     font-size: 30px;
-    line-height: 35px;
+    line-height: 1.16;
   }
 }
 
@@ -156,7 +154,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* identical to box height, or 133% */
 
   color: $secondary-text-color;
@@ -167,7 +165,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* identical to box height, or 133% */
 
   color: $primary-text-color;
@@ -178,7 +176,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   /* identical to box height */
 
   text-align: center;
@@ -198,7 +196,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* identical to box height, or 133% */
 
   color: $secondary-text-color;
@@ -215,7 +213,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* identical to box height, or 133% */
 
   text-transform: uppercase;
@@ -228,7 +226,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 1.66;
   /* or 167% */
 
   color: $primary-text-color;
@@ -253,7 +251,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* or 133% */
   text-align: center;
   text-transform: uppercase;
@@ -283,7 +281,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   /* or 133% */
 
   text-align: center;
