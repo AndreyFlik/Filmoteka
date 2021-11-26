@@ -1,7 +1,8 @@
 @import './base/reset';
 @import './base/variables';
 @import './base/common';
-@import './_header.scss';
-@import './_footer.scss';
-@import './_modal';
-@import './conteiner';
+@import './header';
+@import './footer';
+@import './modal';
+@import './card';
+
