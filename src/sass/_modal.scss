@@ -217,7 +217,6 @@
   /* identical to box height, or 133% */
 
   text-transform: uppercase;
-
   color: $primary-text-color;
 }
 
@@ -253,6 +252,7 @@
   font-size: 12px;
   line-height: 1.33;
   /* or 133% */
+
   text-align: center;
   text-transform: uppercase;
   padding: 0 10px;
@@ -286,8 +286,8 @@
 
   text-align: center;
   text-transform: uppercase;
-
   color: $primary-text-color;
+
   @media screen and (min-width: 768px) {
     width: 125px;
   }
