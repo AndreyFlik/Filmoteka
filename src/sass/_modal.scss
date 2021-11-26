@@ -3,31 +3,33 @@
   pointer-events: none;
 }
 
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
+.backdrop {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  right: 0;
 
-//   width: 100%;
-//   height: 100%;
+  width: 100%;
+  height: 100%;
 
-//   background-color: rgba(0, 0, 0, 0.2);
-// }
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .modal {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
+  position: absolute;
 
-  // width: calc(100vw - 20px);
-  // max-width: 450px;
+  top: 50%;
+  left: 50%;
+
+  width: calc(100vw - 40px);
+  max-width: 450px;
   padding: 48px 20px;
 
-  // transform: translate(-50%, -50%);
-  // background-color: white;
-  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  //   0px 2px 1px rgba(0, 0, 0, 0.2);
-  // border-radius: 4px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
   // @media screen and (min-width: 1200px) {
   //   max-width: 528px;
@@ -50,9 +52,6 @@
 }
 
 .inform-film__stile-res {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   margin-right: 40px;
 }
 
@@ -67,7 +66,6 @@
   font-size: 12px;
   line-height: 16px;
   /* identical to box height, or 133% */
-  text-decoration: none;
 
   color: #8c8c8c;
 }
@@ -79,7 +77,80 @@
   font-size: 12px;
   line-height: 16px;
   /* identical to box height, or 133% */
-  text-decoration: none;
+
+  color: #000000;
+}
+
+.about-film {
+  margin-bottom: 20px;
+}
+
+.about-film__tittle {
+  margin-bottom: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.about-film__info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  color: #000000;
+}
+
+.add-btn__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-btn__to-watch {
+  background-color: #ff6b01;
+  border-radius: 5px;
+  width: 113px;
+  height: 44px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.add-btn__to-queue {
+  border-radius: 5px;
+  width: 113px;
+  height: 44px;
+
+  border-radius: 5px;
+  border: 1px solid #000000;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+
+  text-align: center;
+  text-transform: uppercase;
 
   color: #000000;
 }
