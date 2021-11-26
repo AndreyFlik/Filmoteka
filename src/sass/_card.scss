@@ -1,0 +1,56 @@
+$card-image-height: 400px;
+
+$card-width-mobile: 280px;
+$card-width-tablet: 294px;
+$card-width-desktop: 274px;
+
+.card {
+  width: $card-width-mobile;
+
+  @media screen and (min-width: 768px) {
+    width: $card-width-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: $card-width-desktop;
+  }
+}
+
+.card__image-container {
+  position: relative;
+  margin-bottom: 10px;
+  height: $card-image-height;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.card__image {
+  height: 100%;
+  max-width: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__title {
+}
+
+.card__info {
+  margin-right: 10px;
+  color: $accent-color;
+}
+
+.card__vote-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: $accent-color;
+}
+
+.card__vote {
+  color: $white;
+}
