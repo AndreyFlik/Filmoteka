@@ -16,37 +16,34 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.div {
-  position: fixed;
-  top: 0;
-  // padding: 20px;
-}
-
 .modal {
   z-index: 1;
   position: absolute;
-  // overflow: scroll;
-  padding: 20px 0;
   top: 0px;
-  // top: 75%;
   left: 50%;
+  transform: translate(-50%, 0%);
+
+  padding: 20px 0;
 
   width: calc(100vw - 40px);
-  // height: calc(100vh - 40px);
   max-width: 450px;
 
-  transform: translate(-50%, 0%);
+  @media screen and (min-width: 768px) {
+    max-width: 618px;
+  }
 }
 
 .modal-body {
+  position: relative;
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 20px 20px;
-  @media screen and (min-width: 768px) {
-    max-width: 618px;
-  }
+  // padding: 20px 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 48px;
+  padding-bottom: 41px;
 }
 
 .modal__button {
@@ -69,7 +66,7 @@
   width: 240px;
   height: 357px;
   margin-bottom: 30px;
-  margin-top: 10px;
+  // margin-top: 48px;
 
   @media screen and (min-width: 768px) {
     width: 264px;
