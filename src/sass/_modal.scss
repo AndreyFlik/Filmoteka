@@ -52,7 +52,7 @@
   padding-top: 48px;
   padding-bottom: 40px;
 
-  background-color: white;
+  background-color: $white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -127,7 +127,7 @@
 
   text-decoration: none;
 
-  color: #000000;
+  color: $primary-text-color;
   @media screen and (min-width: 1024px) {
     font-size: 30px;
     line-height: 35px;
@@ -159,7 +159,7 @@
   line-height: 16px;
   /* identical to box height, or 133% */
 
-  color: #8c8c8c;
+  color: $secondary-text-color;
 }
 
 .inform-film__data {
@@ -170,7 +170,7 @@
   line-height: 16px;
   /* identical to box height, or 133% */
 
-  color: #000000;
+  color: $primary-text-color;
 }
 
 .inform-film__data--bacground {
@@ -184,9 +184,9 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: $white;
 
-  background-color: #ff6b01;
+  background-color: $btn-color;
   border-radius: 5px;
   padding: 1px 10px;
 }
@@ -201,7 +201,7 @@
   line-height: 16px;
   /* identical to box height, or 133% */
 
-  color: #8c8c8c;
+  color: $secondary-text-color;
 }
 
 .about-film {
@@ -220,7 +220,7 @@
 
   text-transform: uppercase;
 
-  color: #000000;
+  color: $primary-text-color;
 }
 
 .about-film__info {
@@ -231,7 +231,7 @@
   line-height: 20px;
   /* or 167% */
 
-  color: #000000;
+  color: $primary-text-color;
 }
 
 .add-btn__wrap {
@@ -244,7 +244,7 @@
 }
 
 .add-btn__to-watch {
-  background-color: #ff6b01;
+  background-color: $btn-color;
   border-radius: 5px;
   width: 113px;
   height: 44px;
@@ -259,7 +259,7 @@
   text-transform: uppercase;
   padding: 0 10px;
 
-  color: #ffffff;
+  color: $white;
 
   @media screen and (min-width: 768px) {
     padding: 0;
@@ -277,7 +277,7 @@
   height: 44px;
 
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid $primary-text-color;
 
   font-family: Roboto;
   font-style: normal;
@@ -289,7 +289,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #000000;
+  color: $primary-text-color;
   @media screen and (min-width: 768px) {
     width: 125px;
   }
