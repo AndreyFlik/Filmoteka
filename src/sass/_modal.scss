@@ -6,7 +6,7 @@
 .backdrop {
   z-index: 0;
   position: fixed;
-  overflow: auto;
+  overflow: scroll;
   top: 0;
   right: 0;
 
@@ -17,6 +17,7 @@
 }
 
 .modal {
+  // overflow: scroll;
   z-index: 1;
   position: absolute;
   top: 0px;
@@ -29,13 +30,14 @@
   max-width: 450px;
 
   @media screen and (min-width: 768px) {
-    top: 230px;
+    // top: 230px;
 
+    padding: 230px 0;
     max-width: 618px;
   }
   @media screen and (min-width: 1024px) {
-    top: 100px;
-
+    // top: 100px;
+    padding: 100px 0;
     max-width: 882px;
   }
 }
