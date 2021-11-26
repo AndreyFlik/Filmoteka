@@ -5,7 +5,7 @@
 
 .backdrop {
   position: fixed;
-  overflow: scroll;
+
   top: 0;
   right: 0;
 
@@ -17,13 +17,15 @@
 
 .modal {
   position: absolute;
+  overflow: scroll;
 
   top: 50%;
   left: 50%;
 
   width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
   max-width: 450px;
-  padding: 48px 20px;
+  padding: 40px 20px;
 
   transform: translate(-50%, -50%);
   background-color: white;
@@ -35,7 +37,37 @@
   //   max-width: 528px;
   // }
 }
+
+.modal__button {
+  position: absolute;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background-color: tomato;
+}
+
+.modal__images {
+  width: 240px;
+  height: 357px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.modal__images--size {
+  height: 100%;
+}
+
 .modal__tittle {
+  padding-bottom: 20px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -49,6 +81,7 @@
 
 .inform-film__wrap {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .inform-film__stile-res {
@@ -57,6 +90,10 @@
 
 .inform-film__stile-res:last-child {
   margin-right: 0px;
+}
+
+.inform-film__indent {
+  margin-bottom: 10px;
 }
 
 .inform-film__text {
@@ -70,7 +107,7 @@
   color: #8c8c8c;
 }
 
-.inform-film__text-data {
+.inform-film__data {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -79,6 +116,37 @@
   /* identical to box height, or 133% */
 
   color: #000000;
+}
+
+.inform-film__data--bacground {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background-color: #ff6b01;
+  border-radius: 5px;
+  padding: 1px 10px;
+}
+
+.inform-film__data--slash {
+  margin-right: 5px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  color: #8c8c8c;
 }
 
 .about-film {
@@ -130,6 +198,7 @@
   /* or 133% */
   text-align: center;
   text-transform: uppercase;
+  padding: 0 10px;
 
   color: #ffffff;
 }
