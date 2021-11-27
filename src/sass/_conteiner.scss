@@ -1,6 +1,12 @@
-$gallery-bg-color: #e5e5e5;
-.gallery {
-  padding-top: 20px;
+$gallery-bg-color: #E5E5E5;
+
+main {
+  background-color: $gallery-bg-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,27 +14,29 @@ $gallery-bg-color: #e5e5e5;
 }
 
 @media screen and (min-width: 768px) {
-  .gallery {
+  .gallery-list {
     padding-top: 60px;
     gap: 30px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .gallery {
+  .gallery-list {
     gap: 30px;
   }
 }
 
-.pagination {
-  background-color: $gallery-bg-color;
+.pagination-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
 .pagination-item {
   display: flex;
   justify-content: center;
@@ -57,6 +65,10 @@ $gallery-bg-color: #e5e5e5;
 .pagination-btn-left,
 .pagination-btn-rigth {
   background: $footer-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   &:hover,
   &:focus {
@@ -69,7 +81,7 @@ $gallery-bg-color: #e5e5e5;
 }
 
 @media screen and (min-width: 768px) {
-  .pagination {
+  .pagination-list {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -79,4 +91,3 @@ $gallery-bg-color: #e5e5e5;
   .pagination-ellipsis-item {
     display: flex;
   }
-}

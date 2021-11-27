@@ -1,1 +1,27 @@
+.footer__section {
+  background-color: ($footer-bg-color);
+  color: ($footer-text-color);
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
 
+.container {
+  size: 14px;
+  line-height: 1.17;
+  font-weight: 400;
+  text-align: center;
+
+  min-width: 300px;
+  max-width: 480px;
+
+  @media screen and (min-width: 768px) {
+    size: 16px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    max-width: 650px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 912px;
+  }
+}
