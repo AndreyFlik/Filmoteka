@@ -1,1 +1,48 @@
-<header>HEADER</header>
+<div class="header gradient">
+  <div class="container header__container">
+    <div class="header__menu">
+      <a class="link logo header__logo" href="./index.html">
+        <svg width="24" height="24" class="logo__icon">
+          <use href="./images/sprite.svg#film"></use>
+        </svg>
+        <span class="logo__text">Filmoteka</span>
+      </a>
+      <nav class="navigation">
+        <ul class="list navigation__list">
+          <li class="navigation__item">
+            <a class="link navigation__link navigation__link--active js-home" href="#a">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a class="link navigation__link js-library" href="#">My Library</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__form-container js-input">
+      <form id="header__form" class="form header__form">
+        <input
+          type="text"
+          class="form__input"
+          name="form__input"
+          autocomplete="off"
+          placeholder="Movie search"
+        />
+        <span class="form__icon-container">
+          <svg width="24" height="24" class="form__icon">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+          <input class="form__button" type="submit" data-form-submit />
+        </span>
+        <p class="form__text visually-hidden is-hidden">
+          Search result not successful. Enter the correct movie name and
+        </p>
+      </form>
+    </div>
+    <!-- libary -->
+    <div class="header-buttons-container js-buttons is-hidden">
+      <a href="#" class="header-button-watched">Watched</a>
+      <a href="#" class="header-button-queue">queue</a>
+    </div>
+  </div>
+</div>
