@@ -13,7 +13,7 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"gOZV":[function(require,module,exports) {
 module.exports="/Filmoteka/not_found.ae837a68.jpg";
 },{}],"THmy":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e={trendMovies:document.querySelector(".gallery")};var t=e;exports.default=t;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e={trendMovies:document.querySelector(".gallery-list")};var t=e;exports.default=t;
 },{}],"H0gy":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e=[{id:28,name:"Action"},{id:12,name:"Adventure"},{id:16,name:"Animation"},{id:35,name:"Comedy"},{id:80,name:"Crime"},{id:99,name:"Documentary"},{id:18,name:"Drama"},{id:10751,name:"Family"},{id:14,name:"Fantasy"},{id:36,name:"History"},{id:27,name:"Horror"},{id:10402,name:"Music"},{id:9648,name:"Mystery"},{id:10749,name:"Romance"},{id:878,name:"Science Fiction"},{id:10770,name:"TV Movie"},{id:53,name:"Thriller"},{id:10752,name:"War"},{id:37,name:"Western"}];var i=e;exports.default=i;
 },{}],"tYFZ":[function(require,module,exports) {
@@ -25,4 +25,4 @@ module.exports="/Filmoteka/not_found.ae837a68.jpg";
 },{"./services/api":"nuEX","./services/localStorage":"QjLp","./header":"QjLp","./footer":"QjLp","./services/markupMovies":"tYFZ","./services/getMovies":"g762","../templates/card.hbs":"BqeE","./services/getGenre":"H0gy"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka/src.b7d38d9a.js.map
+//# sourceMappingURL=/Filmoteka/src.73cbb8cd.js.map
