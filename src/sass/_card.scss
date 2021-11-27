@@ -11,7 +11,7 @@ $card-width-desktop: 274px;
     width: $card-width-tablet;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     width: $card-width-desktop;
   }
 }

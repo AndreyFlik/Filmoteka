@@ -12,22 +12,20 @@ body {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   min-width: 300px;
   max-width: 480px;
 
   @media screen and (min-width: 768px) {
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 650px;
+    padding-right: 0px;
+    padding-left: 0px;
+    max-width: 618px;
   }
 
   @media screen and (min-width: 1024px) {
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 912px;
+    max-width: 882px;
   }
 }
 
