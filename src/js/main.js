@@ -9,4 +9,3 @@ import cardTpl from '../templates/card.hbs';
 import genres from './services/getGenre';
 
 getMovies();
-console.log(genres);
