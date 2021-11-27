@@ -1,8 +1,13 @@
 $gallery-bg-color: #E5E5E5;
-.gallery{
+
+main {
   background-color: $gallery-bg-color;
-  padding-top: 20px;
-  background-color: rgb(163, 58, 58);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-list {
+  //
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -11,31 +16,34 @@ $gallery-bg-color: #E5E5E5;
 
 
 @media screen and (min-width: 768px) {
-  .gallery {
-  padding-top: 60px;
-  gap: 30px;
+  .gallery-list {
+    padding-top: 60px;
+    gap: 30px;
 
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .gallery{
-  gap: 30px;
+  .gallery-list {
+    gap: 30px;
   }
 }
 
-.pagination{
-  background-color: $gallery-bg-color;
+.pagination-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
 .pagination-item {
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid $gallery-bg-color;
   width: 40px;
   height: 40px;
@@ -60,6 +68,10 @@ $gallery-bg-color: #E5E5E5;
 .pagination-btn-left,
 .pagination-btn-rigth {
   background: $footer-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   &:hover,
   &:focus {
@@ -72,7 +84,7 @@ $gallery-bg-color: #E5E5E5;
 }
 
 @media screen and (min-width: 768px) {
-  .pagination {
+  .pagination-list {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -83,4 +95,3 @@ $gallery-bg-color: #E5E5E5;
     display: flex;
   }
 }
-
