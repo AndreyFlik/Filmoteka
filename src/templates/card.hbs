@@ -1,10 +1,10 @@
-<li class='card'>
+<li class='card' data-id={{id}}>
   <div class='card__image-container'>
-    <img class='card__image' src={{image}} alt='film poster' />
+    <img class='card__image' src={{poster}} alt='film poster' />
   </div>
   <h2 class='card__title'>{{title}}</h2>
-  <span class='card__info'>{{genre}} | {{year}}</span>
+  <span class='card__info'>{{genre_ids}} | {{releaseYear}}</span>
   <div class='card__vote-container'>
-    <span class='card__vote'>{{vote}}</span>
+    <span class='card__vote'>{{vote_average}}</span>
   </div>
 </li>
