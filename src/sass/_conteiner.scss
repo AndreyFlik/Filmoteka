@@ -1,4 +1,4 @@
-$gallery-bg-color: #E5E5E5;
+$gallery-bg-color: #e5e5e5;
 
 main {
   background-color: $gallery-bg-color;
@@ -69,7 +69,6 @@ main {
   justify-content: center;
   align-items: center;
 
-
   &:hover,
   &:focus {
     background-color: $accent-color;
@@ -91,3 +90,4 @@ main {
   .pagination-ellipsis-item {
     display: flex;
   }
+}
