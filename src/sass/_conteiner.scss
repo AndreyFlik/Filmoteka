@@ -1,30 +1,26 @@
-$gallery-bg-color: #E5E5E5;
-.gallery{
-  background-color: $gallery-bg-color;
+$gallery-bg-color: #e5e5e5;
+.gallery {
   padding-top: 20px;
-  background-color: rgb(163, 58, 58);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-
 @media screen and (min-width: 768px) {
   .gallery {
-  padding-top: 60px;
-  gap: 30px;
-
+    padding-top: 60px;
+    gap: 30px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .gallery{
-  gap: 30px;
+  .gallery {
+    gap: 30px;
   }
 }
 
-.pagination{
+.pagination {
   background-color: $gallery-bg-color;
   display: flex;
   justify-content: center;
@@ -35,7 +31,8 @@ $gallery-bg-color: #E5E5E5;
 }
 .pagination-item {
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid $gallery-bg-color;
   width: 40px;
   height: 40px;
@@ -83,4 +80,3 @@ $gallery-bg-color: #E5E5E5;
     display: flex;
   }
 }
-
