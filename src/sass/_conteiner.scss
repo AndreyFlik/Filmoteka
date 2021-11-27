@@ -51,6 +51,10 @@ main {
   background-color: $gallery-bg-color;
 }
 
+.pagination-btn-center span {
+  background-color: $accent-color;
+}
+
 .start,
 .end,
 .pagination-ellipsis-item {
