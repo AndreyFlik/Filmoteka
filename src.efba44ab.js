@@ -25,4 +25,4 @@ module.exports="/Filmoteka/not_found.ae837a68.jpg";
 },{"./services/api":"nuEX","./services/localStorage":"QjLp","./header":"QjLp","./footer":"QjLp","./services/markupMovies":"tYFZ","./services/getMovies":"g762","../templates/card.hbs":"BqeE","./services/getGenre":"H0gy"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka/src.73cbb8cd.js.map
+//# sourceMappingURL=/Filmoteka/src.efba44ab.js.map
