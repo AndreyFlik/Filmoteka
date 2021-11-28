@@ -9,6 +9,7 @@ refs.inputMovies.addEventListener('input', getInputMovies);
 
 function getInputMovies(event) {
   if (!event.target.value.length) {
+    refs.searchProblemAlarm.classList.add('visually-hidden', 'is-hidden');
     return getMovies();
   }
   return seachMovies(event.target.value)
