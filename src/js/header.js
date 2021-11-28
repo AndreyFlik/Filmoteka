@@ -8,7 +8,6 @@ const ERROR_NOT_FOUND = 'Search result not successful. Enter the correct movie n
 refs.inputMovies.addEventListener('input', getInputMovies);
 
 function getInputMovies(event) {
-  console.log(event.target.value.length);
   if (!event.target.value.length) {
     return getMovies();
   }
