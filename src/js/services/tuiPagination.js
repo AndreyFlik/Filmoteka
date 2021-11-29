@@ -6,6 +6,7 @@ import seachMovies from './apiSeach';
 import getMovies from './getMovies';
 import getInputMovies from '../header';
 import renderMovies from './markupMovies';
+import { backToTop } from '../scrollUp';
 
 function startPagination(totalItems = 20000, query = '') {
   const ITEMS_PER_PAGE = 20; //Number of items to draw per page //Количество элементов для рисования на странице
@@ -38,6 +39,7 @@ function startPagination(totalItems = 20000, query = '') {
   const pagination = new Pagination(refs.container, options);
 
   pagination.on('afterMove', event => {
+    backToTop();
     const page = pagination.getCurrentPage();
     if (query) {
       seachMovies(query, page)
