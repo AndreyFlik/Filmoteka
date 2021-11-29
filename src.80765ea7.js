@@ -45,4 +45,4 @@ var t=arguments[3],e="Expected a function",n=NaN,r="[object Symbol]",i=/^\s+|\s+
 },{"./services/api":"nuEX","./services/localStorage":"QjLp","./header":"cGsR","./footer":"QjLp","./services/markupMovies":"tYFZ","./services/getMovies":"g762","../templates/card.hbs":"BqeE","./services/getGenre":"H0gy","./services/modalFilm":"EAdf","./services/tuiPagination":"Hsci","./scrollUp":"Bjts"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka/src.d05c681f.js.map
+//# sourceMappingURL=/Filmoteka/src.80765ea7.js.map
