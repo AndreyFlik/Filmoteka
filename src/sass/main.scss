@@ -1,10 +1,12 @@
 @import './base/reset';
 @import './base/variables';
 @import './base/common';
+@import './base/utils';
 @import './header';
 @import './footer';
-@import './modal';
 @import './card';
 @import './conteiner';
+@import './modal/modal';
+@import './modal/film';
 @import './pagination';
 @import './scroll-up';

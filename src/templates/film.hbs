@@ -1,0 +1,40 @@
+<div class='film'>
+  <div class='film__image-wrapper'>
+    <img class='film__image' src={{poster}} alt='Film poster' />
+  </div>
+  <div class='film__data-wrapper'>
+    <h2 class='film__title'>{{title}}</h2>
+    <div class='film__table'>
+      <ul class='film__column'>
+        <li><p class='film__key'>Vote / Votes</p></li>
+        <li><p class='film__key'>Popularity</p></li>
+        <li><p class='film__key'>Original Title</p></li>
+        <li><p class='film__key'>Genre</p></li>
+      </ul>
+      <ul class='film__column'>
+        <li>
+          <p class='film__value'>
+            <span class='film__accent'>{{vote}}</span>
+            /
+            {{votes}}
+          </p>
+        </li>
+        <li><p class='film__value'>{{popularity}}</p></li>
+        <li><p class='film__value'>{{originalTitle}}</p></li>
+        <li><p class='film__value'>{{genre}}</p></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class='film__subtitle'>About</h3>
+      <p class='film__about'>{{description}}</p>
+    </div>
+    <ul class='film__btn-list'>
+      <li>
+        <button class='film__button film__button--watch' type='button'>add to watched</button>
+      </li>
+      <li>
+        <button class='film__button film__button--queue' type='button'>add to queue</button>
+      </li>
+    </ul>
+  </div>
+</div>
