@@ -13,6 +13,18 @@ const data = {
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, autem fugit illo numquam omnis perferendis quos sequi! Alias commodi dolor esse exercitationem iste laudantium minima nemo, neque placeat porro possimus, soluta sunt ullam vero voluptatem? A, ab alias eaque fugiat impedit iure, laudantium, nam quae qui quo recusandae sed.',
 };
 
+const onClickClose = () => {
+  refs.body.style.overflow = 'auto';
+  refs.modalBackdrop.classList.add('is-hidden');
+};
+
+const onKeydownEsc = e => {
+  if (e.key === 'Escape') {
+    e.currentTarget.removeEventListener('keydown', onKeydownEsc);
+    onClickClose();
+  }
+};
+
 const onClickCard = e => {
   const card = e.target.closest('.card');
 
@@ -23,11 +35,7 @@ const onClickCard = e => {
   refs.modalContent.innerHTML = filmTpl(data);
   refs.modalBackdrop.classList.remove('is-hidden');
   refs.body.style.overflow = 'hidden';
-};
-
-const onClickClose = () => {
-  refs.body.style.overflow = 'auto';
-  refs.modalBackdrop.classList.add('is-hidden');
+  refs.body.addEventListener('keydown', onKeydownEsc);
 };
 
 const onClickBackdrop = e => {
