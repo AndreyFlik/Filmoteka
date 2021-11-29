@@ -16,6 +16,7 @@ const makeMoviesMarkup = movies => {
           if (genre.id === id) return genre.name;
         });
       });
+      if (ids.length > 2) ids.splice(2, ids.length - 1);
       const genresOfMovie = ids
         .flatMap(id => id)
         .map(genre => genre.name)
