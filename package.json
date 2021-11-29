@@ -26,8 +26,8 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "tui-pagination": "^3.4.1",
     "js-loading-overlay": "^1.2.0",
-    "lodash.debounce": "^4.0.8"
+    "lodash.debounce": "^4.0.8",
+    "tui-pagination": "^3.4.1"
   }
 }
