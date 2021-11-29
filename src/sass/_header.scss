@@ -1,3 +1,23 @@
+.header-button-watched.accent-color {
+  background-color: $accent-color;
+  border: none;
+}
+
+.header-button-queue.accent-color {
+  background-color: $accent-color;
+  border: none;
+}
+
+.header-button-watched {
+  width: 130px;
+  height: 44px;
+}
+
+.header-button-queue {
+  width: 130px;
+  height: 44px;
+}
+
 .header {
   height: 230px;
   &__container {
@@ -228,6 +248,14 @@
     line-height: 1.172em;
     color: #ffffff;
   }
+  .header-button-watched {
+    width: 136px;
+    height: 44px;
+  }
+  .header-button-queue {
+    width: 136px;
+    height: 44px;
+  }
 }
 
 // /* ========== End Header ========== */
@@ -240,9 +268,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  /* or 133% */
 
-  display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
@@ -260,7 +286,6 @@
   font-size: 12px;
   line-height: 16px;
 
-  display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
