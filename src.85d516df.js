@@ -9,7 +9,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"IrEb":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0,require("js-loading-overlay");const e="https://api.themoviedb.org/3/search/movie",r="1db5479ca98fac1ae129bcbe15cc6182";var o={overlayBackgroundColor:"#666666",overlayOpacity:"0.1",spinnerIcon:"ball-circus",spinnerColor:"#000",spinnerSize:"3x",overlayIDName:"overlay",spinnerIDName:"spinner",offsetY:0,offsetX:0,lockScroll:!0,containerID:null};let a=1;const n=new URLSearchParams({api_key:r,page:a});async function t(r){JsLoadingOverlay.show(o);const a=await fetch(`${e}?${n}&query=${r}`).then(e=>e.ok?e.json():Promise.reject(new Error("Something went wrong")));return JsLoadingOverlay.hide(),a}var s=t;exports.default=s;
 },{"js-loading-overlay":"XwMB"}],"THmy":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e={trendMovies:document.querySelector(".gallery-list"),inputMovies:document.querySelector("#header__form"),searchProblemAlarm:document.querySelector(".form__text")};var r=e;exports.default=r;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e={trendMovies:document.querySelector(".gallery-list"),inputMovies:document.querySelector("#header__form"),searchProblemAlarm:document.querySelector(".form__text"),watchedBtn:document.querySelector(".header-button-watched"),queueBtn:document.querySelector(".header-button-queue")};var t=e;exports.default=t;
 },{}],"pAws":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -36,4 +36,4 @@ var t=arguments[3],e="Expected a function",n=NaN,r="[object Symbol]",i=/^\s+|\s+
 },{"./services/api":"nuEX","./services/localStorage":"QjLp","./header":"cGsR","./footer":"QjLp","./services/markupMovies":"tYFZ","./services/getMovies":"g762","../templates/card.hbs":"BqeE","./services/getGenre":"H0gy","./scrollUp":"Bjts"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka/src.752a31b5.js.map
+//# sourceMappingURL=/Filmoteka/src.85d516df.js.map
