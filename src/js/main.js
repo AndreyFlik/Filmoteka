@@ -1,14 +1,11 @@
-import fetchMovies from './services/api';
 import './services/localStorage';
 
 import './header';
 import './footer';
 import makeMoviesMarkup from './services/markupMovies';
-import getMovies from './services/getMovies';
+import { getMovies } from './services/api';
 import cardTpl from '../templates/card.hbs';
-import genres from './services/getGenre';
 import './services/modalFilm';
-import './services/tuiPagination';
 import startPagination from './services/tuiPagination';
 import './scrollUp';
 
