@@ -1,9 +1,11 @@
 import fetchMovies from './api';
 import renderMovies from './markupMovies';
-const getMovies = () => {
-  fetchMovies()
+import startPagination from './tuiPagination';
+const getMovies = (page = 1) => {
+  return fetchMovies(page)
     .then(data => {
       renderMovies(data.results);
+      return data;
     })
     .catch(err => handleError(err));
 };

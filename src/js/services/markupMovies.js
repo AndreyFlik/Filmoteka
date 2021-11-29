@@ -11,8 +11,17 @@ const makeMoviesMarkup = movies => {
       if (poster_path) {
         poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
       }
+      const ids = genre_ids.map(id => {
+        return genres.filter(genre => {
+          if (genre.id === id) return genre.name;
+        });
+      });
+      const genresOfMovie = ids
+        .flatMap(id => id)
+        .map(genre => genre.name)
+        .join(', ');
 
-      return cardTpl({ title, poster, vote_average, genre_ids, releaseYear, id });
+      return cardTpl({ title, poster, vote_average, genresOfMovie, releaseYear, id });
     })
     .join('');
 };
