@@ -3,13 +3,15 @@ import refs from './services/refs.js';
 import renderMovies from './services/markupMovies';
 import getMovies from './services/getMovies.js';
 import startPagination from './services/tuiPagination';
+const debounce = require('lodash.debounce');
 
 const ERROR_NOT_FOUND = 'Search result not successful. Enter the correct movie name.';
 
-refs.inputMovies.addEventListener('input', getInputMovies);
+refs.inputMovies.addEventListener('input', debounce(getInputMovies, 1000));
 
 function getInputMovies(event) {
   if (!event.target.value.length) {
+    refs.searchProblemAlarm.classList.add('visually-hidden', 'is-hidden');
     return getMovies();
   }
   return seachMovies(event.target.value)
