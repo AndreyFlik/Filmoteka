@@ -9,6 +9,10 @@
   }
 }
 
+.tui-is-disabled {
+  opacity: 0;
+}
+
 .tui-pagination .tui-page-btn.tui-is-selected {
   background-color: $accent-color;
   border: none;
