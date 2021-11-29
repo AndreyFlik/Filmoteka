@@ -1,7 +1,7 @@
-import seachMovies from './services/apiSeach';
+import { seachMovies } from './services/api';
 import refs from './services/refs.js';
 import renderMovies from './services/markupMovies';
-import getMovies from './services/getMovies.js';
+import getMovies from './services/api';
 import startPagination from './services/tuiPagination';
 const debounce = require('lodash.debounce');
 

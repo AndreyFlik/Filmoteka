@@ -1,10 +1,7 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import refs from './refs';
-import fetchMovies from './api';
-import seachMovies from './apiSeach';
-import getMovies from './getMovies';
-import getInputMovies from '../header';
+import { getMovies, seachMovies } from './api';
 import renderMovies from './markupMovies';
 import { backToTop } from '../scrollUp';
 
@@ -16,7 +13,7 @@ function startPagination(totalItems = 20000, query = '') {
     itemsPerPage: ITEMS_PER_PAGE,
     visiblePages: VISIBLE_PAGES, //уточнить изменения в зависимости от медиаправил!!!
     page: 1, //
-    centerAlign: false,
+    centerAlign: true,
     firstItemClassName: 'tui-first-child',
     lastItemClassName: 'tui-last-child',
     template: {
