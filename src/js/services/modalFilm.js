@@ -22,9 +22,11 @@ const onClickCard = e => {
 
   refs.modalContent.innerHTML = filmTpl(data);
   refs.modalBackdrop.classList.remove('is-hidden');
+  refs.body.style.overflow = 'hidden';
 };
 
 const onClickClose = () => {
+  refs.body.style.overflow = 'auto';
   refs.modalBackdrop.classList.add('is-hidden');
 };
 

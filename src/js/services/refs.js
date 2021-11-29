@@ -1,4 +1,5 @@
 const refs = {
+  body: document.querySelector('body'),
   trendMovies: document.querySelector('.gallery-list'),
   inputMovies: document.querySelector('#header__form'),
   searchProblemAlarm: document.querySelector('.form__text'),
