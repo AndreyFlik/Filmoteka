@@ -1,0 +1,57 @@
+@import './backdrop';
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 20px 0;
+
+  width: calc(100vw - 40px);
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    padding: 230px 0;
+    max-width: 618px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 100px 0;
+    max-width: 882px;
+  }
+}
+
+.modal__body {
+  position: relative;
+  display: block;
+  padding: 48px 20px 40px;
+
+  background-color: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 42px;
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  background-color: transparent;
+}
