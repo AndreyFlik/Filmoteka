@@ -46,7 +46,6 @@ const fetchMovieById = async id => {
     const movie = await response.json();
     url = '';
 
-    console.log(movie);
     return movie;
   } catch (error) {
     console.log(error);
