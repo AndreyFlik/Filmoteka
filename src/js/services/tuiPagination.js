@@ -3,7 +3,7 @@ import 'tui-pagination/dist/tui-pagination.css';
 import refs from './refs';
 // import { getMovies, seachMovies } from './api';
 import { fetchMovies } from './apiService';
-import renderMovies from './markupMovies';
+import { renderMovies } from './markupMovies';
 import { backToTop } from '../scrollUp';
 
 function startPagination(totalItems = 20000, query = '') {

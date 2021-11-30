@@ -3,6 +3,7 @@ import refs from './refs';
 import Modal from './modal';
 import { fetchMovieById } from './apiService';
 import emptyImg from '../../images/not_found.jpg';
+import addClass from './localStorage';
 
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const modal = new Modal(movieTpl);
@@ -48,6 +49,9 @@ const renderModal = async card => {
   };
 
   modal.renderAndShow(movieData);
+  addClass();
 };
 
 refs.trendMovies.addEventListener('click', onClickGallery);
+refs.watched.addEventListener('click', onClickGallery);
+refs.queue.addEventListener('click', onClickGallery);
