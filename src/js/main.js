@@ -6,7 +6,7 @@ import './footer';
 import renderMovies from './services/markupMovies';
 // import { getMovies } from './services/api';
 import cardTpl from '../templates/card.hbs';
-import './services/modalFilm';
+import './services/modalMovie';
 import startPagination from './services/tuiPagination';
 import './scrollUp';
 import { fetchGenre, fetchMovies, fetchMovieById } from './services/apiService';
