@@ -24,7 +24,6 @@ $card-width-desktop: 274px;
 }
 
 .card__image-container {
-  position: relative;
   margin-bottom: 10px;
   height: $card-image-height;
   overflow: hidden;
@@ -32,12 +31,7 @@ $card-width-desktop: 274px;
 }
 
 .card__image {
-  width: 100%;
-  max-width: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .card__info {
