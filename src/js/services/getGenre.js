@@ -7,4 +7,4 @@ const fetchGenre = () => {
 let genres = [];
 fetchGenre().then(data => genres.push(...data.genres));
 
-export default genres;
+// export default genres;
