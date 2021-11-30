@@ -61,4 +61,4 @@ module.exports="/Filmoteka/sprite.506a4ba1.svg";
 },{"./services/localStorage":"QjLp","./header":"cGsR","./footer":"b5Ik","./services/markupMovies":"tYFZ","../templates/card.hbs":"BqeE","./services/modalMovie":"M4iR","./services/tuiPagination":"Hsci","./scrollUp":"Bjts","./services/apiService":"o1Xb"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka/src.d1d099bd.js.map
+//# sourceMappingURL=/Filmoteka/src.828a7eed.js.map
