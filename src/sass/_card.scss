@@ -7,6 +7,7 @@ $card-width-desktop: 274px;
 .card {
   width: $card-width-mobile;
   cursor: pointer;
+  transition: transform $anim-props;
 
   @media screen and (min-width: 768px) {
     width: $card-width-tablet;
@@ -14,6 +15,11 @@ $card-width-desktop: 274px;
 
   @media screen and (min-width: 1024px) {
     width: $card-width-desktop;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale3d(1.05, 1.05, 1.05);
   }
 }
 
