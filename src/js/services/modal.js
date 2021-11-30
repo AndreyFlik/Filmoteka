@@ -1,4 +1,4 @@
-import refs from './services/refs';
+import refs from './refs';
 
 export default class Modal {
   #contentTemplate;
