@@ -1,7 +1,7 @@
 import cardTpl from '../../templates/card.hbs';
 import emptyImg from '../../images/not_found.jpg';
 import refs from './refs';
-import genres from './getGenre';
+import { genresArr } from './apiService';
 
 const makeMoviesMarkup = movies => {
   return movies
@@ -12,7 +12,7 @@ const makeMoviesMarkup = movies => {
         poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
       }
       const ids = genre_ids.map(id => {
-        return genres.filter(genre => {
+        return genresArr.filter(genre => {
           if (genre.id === id) return genre.name;
         });
       });
