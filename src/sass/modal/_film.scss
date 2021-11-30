@@ -95,14 +95,14 @@
 
 .film__table {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 10px;
   line-height: 1.33;
 }
 
-.film__column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.film__entry {
+  display: grid;
+  grid-template-columns: 108px auto;
 }
 
 .film__key {
@@ -128,7 +128,7 @@
   color: $primary-text-color;
 }
 
-.film__about {
+.film__overview {
   line-height: 1.66;
   color: $primary-text-color;
 }
