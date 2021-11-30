@@ -1,6 +1,6 @@
 // import { seachMovies } from './services/api';
 import refs from './services/refs.js';
-import renderMovies from './services/markupMovies';
+import { renderMovies } from './services/markupMovies';
 // import { getMovies } from './services/api';
 import { fetchMovies } from './services/apiService';
 import startPagination from './services/tuiPagination';

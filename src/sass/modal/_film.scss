@@ -55,12 +55,7 @@
     width: 125px;
   }
 
-  &--watch {
-    background-color: $btn-color;
-    text-transform: uppercase;
-    color: $white;
-  }
-
+  &--watch,
   &--queue {
     border: 1px solid $primary-text-color;
     text-transform: uppercase;
@@ -131,4 +126,12 @@
 .film__overview {
   line-height: 1.66;
   color: $primary-text-color;
+}
+
+.active-queue,
+.active-watched {
+  background-color: $btn-color;
+  text-transform: uppercase;
+  color: $white;
+  border-color: $btn-color;
 }

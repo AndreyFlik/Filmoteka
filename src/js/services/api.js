@@ -1,5 +1,5 @@
 import 'js-loading-overlay';
-import renderMovies from './markupMovies';
+import { renderMovies } from './markupMovies';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
