@@ -8,14 +8,16 @@ import photo6 from '../../images/our-team/olexander.jpg';
 import photo7 from '../../images/our-team/valerian.jpg';
 import sprite from '../../images/sprite.svg';
 import template from '../../templates/footer-modal-markup.hbs';
+import Modal from './modal';
 
 const pathInstagram = sprite + '#icon-instagram';
 const pathFacebook = sprite + '#icon-facebook';
 const pathLinkedin = sprite + '#icon-linkedin';
 const pathGithub = sprite + '#icon-github';
+const modal = new Modal(template);
 
 const onFooterClick = () => {
-  refs.modalContent.innerHTML = template({
+  modal.renderAndShow({
     photo1,
     photo2,
     photo3,
@@ -28,8 +30,6 @@ const onFooterClick = () => {
     pathLinkedin,
     pathGithub,
   });
-  refs.modalBackdrop.classList.remove('is-hidden');
-  refs.body.style.overflow = 'hidden';
 };
 
 refs.footerModalLink.addEventListener('click', onFooterClick);
