@@ -3,7 +3,6 @@ const API_KEY = '1db5479ca98fac1ae129bcbe15cc6182';
 
 let genresArr = [];
 let url = '';
-let query = '';
 
 let searchMovies = `${BASE_URL}/search/movie`;
 let trendMovies = `${BASE_URL}/trending/movie/week`;
@@ -14,11 +13,9 @@ const fetchGenre = async () => {
   const data = await response.json(); //[{}, {}, ..., {}]
 
   genresArr = data.genres;
-  console.log(genresArr);
 };
 
 const fetchMovies = async (page = 1, query) => {
-  console.log(query);
   if (query) {
     url = `${searchMovies}?api_key=${API_KEY}&query=${query}&page=${page}`;
   } else {
@@ -26,8 +23,6 @@ const fetchMovies = async (page = 1, query) => {
   }
   const response = await fetch(url);
   const data = await response.json(); // Получаем объект c полем results: [{}, {}, ..., {}]
-
-  console.log(data);
   // ["названия жарнов", ""]
   data.results = data.results.map(movie => {
     return {
