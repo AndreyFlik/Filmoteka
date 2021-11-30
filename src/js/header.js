@@ -1,7 +1,7 @@
-import seachMovies from './services/apiSeach';
+import { seachMovies } from './services/api';
 import refs from './services/refs.js';
 import renderMovies from './services/markupMovies';
-import getMovies from './services/getMovies.js';
+import getMovies from './services/api';
 import startPagination from './services/tuiPagination';
 const debounce = require('lodash.debounce');
 
@@ -30,3 +30,41 @@ function getInputMovies(event) {
     })
     .catch(error => console.log(error.message));
 }
+
+function homeInputHeader() {
+  refs.inputLink.classList.remove('is-hidden');
+  refs.buttonsLink.classList.add('is-hidden');
+  refs.homeLink.classList.add('navigation__link--active');
+  refs.libraryLink.classList.remove('navigation__link--active');
+  refs.headerRefs.classList.remove('bg-library');
+  refs.logoTextRefs.classList.remove('is-hidden');
+  refs.trendMovies.classList.remove('is-hidden');
+  refs.paginationRefs.classList.remove('is-hidden');
+}
+
+function homeLibraryHeader() {
+  refs.buttonsLink.classList.remove('is-hidden');
+  refs.inputLink.classList.add('is-hidden');
+  refs.homeLink.classList.remove('navigation__link--active');
+  refs.libraryLink.classList.add('navigation__link--active');
+  refs.headerRefs.classList.add('bg-library');
+  refs.logoTextRefs.classList.add('is-hidden');
+  refs.trendMovies.classList.add('is-hidden');
+  refs.paginationRefs.classList.add('is-hidden');
+}
+
+function openQueue() {
+  refs.queueBtn.classList.add('accent-color');
+  refs.watchedBtn.classList.remove('accent-color');
+}
+
+function openWatched() {
+  refs.queueBtn.classList.remove('accent-color');
+  refs.watchedBtn.classList.add('accent-color');
+}
+
+refs.homeLink.addEventListener('click', homeInputHeader);
+refs.libraryLink.addEventListener('click', homeLibraryHeader);
+
+refs.queueBtn.addEventListener('click', openQueue);
+refs.watchedBtn.addEventListener('click', openWatched);
