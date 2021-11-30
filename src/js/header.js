@@ -9,6 +9,7 @@ const debounce = require('lodash.debounce');
 const ERROR_NOT_FOUND = 'Search result not successful. Enter the correct movie name.';
 
 refs.inputMovies.addEventListener('input', debounce(getInputMovies, 1000));
+refs.inputMovies.addEventListener('submit', e => e.preventDefault());
 const startPage = 1;
 
 function getInputMovies(event) {
