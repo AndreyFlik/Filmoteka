@@ -18,6 +18,7 @@ const refs = {
   modalBackdrop: document.querySelector('.backdrop'),
   modalContent: document.querySelector('.modal__content'),
   modalBtnClose: document.querySelector('.modal__close'),
+  footerModalLink: document.querySelector('.footer-link'),
 };
 
 export default refs;
