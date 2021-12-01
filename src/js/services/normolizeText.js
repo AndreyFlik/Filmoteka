@@ -1,6 +1,6 @@
 const NORALIZE_SYMBOL = 400;
 
-function normolixeText(str) {
+function normolixeText(str = '') {
   let result = '...';
 
   if (str.length > NORALIZE_SYMBOL) {

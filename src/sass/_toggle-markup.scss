@@ -1,13 +1,13 @@
 .toggleMarkup {
   margin-left: 20px;
   font-size: 200%;
-  // display: none;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .toggleMarkup {
     margin-left: 75px;
-    // display: block;
+    display: block;
   }
 }
 .toggleMarkup:before {

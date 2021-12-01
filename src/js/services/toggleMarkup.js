@@ -40,6 +40,8 @@ if (localStorageMarkup === Markup.LIST) {
   finalMarkup = cardTpl;
 }
 
+if (window.innerWidth < 768) return (finalMarkup = cardTpl);
+
 toggleMarkup.addEventListener('click', changeMarkup);
 
 export { finalMarkup };
