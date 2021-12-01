@@ -21,7 +21,7 @@ const getVideoTrailer = (id, whatToInsert, whereToInsert) => {
   });
 };
 
-//agetVideoTrailer(343611, refs.trendMovies, "beforeend");
+// agetVideoTrailer(343611, refs.trendMovies, 'beforeend');
 
 export default getVideoTrailer;
 //api.themoviedb.org/3/movie/343611?api_key={api_key}&append_to_response=videos
