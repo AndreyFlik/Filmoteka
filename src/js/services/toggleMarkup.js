@@ -45,5 +45,3 @@ if (window.innerWidth < 768) return (finalMarkup = cardTpl);
 toggleMarkup.addEventListener('click', changeMarkup);
 
 export { finalMarkup };
-
-// console.log(window.innerWidth); - проверка для отрисовки переключателя
