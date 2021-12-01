@@ -1,6 +1,6 @@
 import refs from './refs';
 
-export default class Modal {
+class Modal {
   #contentTemplate;
 
   constructor(contentTemplate) {
@@ -9,16 +9,28 @@ export default class Modal {
     refs.modalBackdrop.addEventListener('click', this.#onClickBackdrop);
   }
 
-  renderAndShow(templateData) {
+  setTemplate(contentTemplate) {
+    this.#contentTemplate = contentTemplate;
+  }
+
+  render(templateData) {
     refs.modalContent.innerHTML = this.#contentTemplate(templateData);
+  }
+
+  show() {
     refs.modalBackdrop.classList.remove('is-hidden');
     refs.body.style.overflow = 'hidden';
     refs.body.addEventListener('keydown', this.#onKeydownEsc);
   }
 
-  #onClickClose = () => {
+  close() {
+    refs.modalContent.innerHTML = '';
     refs.body.style.overflow = 'auto';
     refs.modalBackdrop.classList.add('is-hidden');
+  }
+
+  #onClickClose = () => {
+    this.close();
   };
 
   #onKeydownEsc = e => {
@@ -37,3 +49,5 @@ export default class Modal {
     }
   };
 }
+
+export default Modal;
