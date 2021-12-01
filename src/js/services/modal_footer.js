@@ -17,7 +17,7 @@ const pathGithub = sprite + '#icon-github';
 const modal = new Modal(template);
 
 const onFooterClick = () => {
-  modal.renderAndShow({
+  modal.render({
     photo1,
     photo2,
     photo3,
@@ -30,6 +30,7 @@ const onFooterClick = () => {
     pathLinkedin,
     pathGithub,
   });
+  modal.show();
 };
 
 refs.footerModalLink.addEventListener('click', onFooterClick);

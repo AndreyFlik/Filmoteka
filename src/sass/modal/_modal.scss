@@ -5,7 +5,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0) scale(1);
+  transition: transform $anim-props;
   padding: 20px 0;
 
   width: calc(100vw - 40px);
@@ -14,6 +15,11 @@
   @media screen and (min-width: 768px) {
     padding: 230px 0;
     max-width: 618px;
+
+    @media screen and (min-height: 600px) {
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
   @media screen and (min-width: 1024px) {
     padding: 100px 0;

@@ -1,0 +1,22 @@
+.toggleMarkup {
+  margin-left: 20px;
+  font-size: 200%;
+}
+
+@media screen and (min-width: 768px) {
+  .toggleMarkup {
+    margin-left: 75px;
+  }
+}
+.toggleMarkup:before {
+  content: url('../images/markup-list.svg');
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+
+  background-color: $btn-color;
+}
+.toggleMarkup.active:before {
+  content: url('../images/markup-grid.svg');
+}

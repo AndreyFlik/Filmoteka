@@ -1,8 +1,9 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import refs from './refs';
-import { getMovies, seachMovies } from './api';
-import renderMovies from './markupMovies';
+// import { getMovies, seachMovies } from './api';
+import { fetchMovies } from './apiService';
+import { renderMovies } from './markupMovies';
 import { backToTop } from '../scrollUp';
 
 function startPagination(totalItems = 20000, query = '') {
@@ -38,15 +39,20 @@ function startPagination(totalItems = 20000, query = '') {
   pagination.on('afterMove', event => {
     backToTop();
     const page = pagination.getCurrentPage();
-    if (query) {
-      seachMovies(query, page)
-        .then(data => {
-          renderMovies(data.results);
-        })
-        .catch(error => console.log(error.message));
-    } else {
-      getMovies(page);
-    }
+    fetchMovies(page, query)
+      .then(data => {
+        renderMovies(data.results);
+      })
+      .catch(error => console.log(error.message));
+    // if (query) {
+    //   seachMovies(query, page)
+    // .then(data => {
+    //   renderMovies(data.results);
+    // })
+    //     .catch(error => console.log(error.message));
+    // } else {
+    //   getMovies(page);
+    // }
   });
 }
 export default startPagination;

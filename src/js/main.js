@@ -2,13 +2,17 @@ import './services/localStorage';
 
 import './header';
 import './footer';
-import makeMoviesMarkup from './services/markupMovies';
-import { getMovies } from './services/api';
-import cardTpl from '../templates/card.hbs';
-import './services/modalFilm';
+import { renderMovies } from './services/markupMovies';
+import './services/modalMovie';
 import startPagination from './services/tuiPagination';
 import './scrollUp';
+import { fetchGenre, fetchMovies } from './services/apiService';
+import './services/theme';
+import './services/toggleMarkup';
 
-getMovies().then(data => {
-  startPagination(data.total_results);
-});
+fetchGenre()
+  .then(fetchMovies)
+  .then(data => {
+    renderMovies(data.results);
+    startPagination(data.total_results);
+  });
