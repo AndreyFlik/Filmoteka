@@ -1,0 +1,54 @@
+.theme__btn {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: ($dark-theme-secon-bg-color);
+  border-radius: 50%;
+  align-items: center;
+}
+
+.theme__icon {
+  fill: ($footer-bg-color);
+}
+
+.dark-theme main {
+  background-color: ($dark-theme-prim-bg-color);
+}
+
+.dark-theme .card__title {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .modal__body {
+  background-color: ($dark-theme-prim-bg-color);
+}
+
+.dark-theme .our-team-title {
+  color: ($accent-color);
+}
+
+.dark-theme .our-team-list-item {
+  opacity: 0.7;
+}
+
+.dark-theme .tui-page-btn {
+  background-color: ($dark-theme-secon-bg-color);
+}
+
+.dark-theme .theme__icon {
+  fill: ($accent-color);
+}
+
+.dark-theme .footer__section {
+  background-color: ($dark-theme-prim-bg-color);
+  color: ($footer-bg-color);
+}
+
+.dark-theme .footer-link {
+  background-color: ($dark-theme-prim-bg-color);
+  text-decoration: underline;
+  color: ($footer-bg-color);
+}
