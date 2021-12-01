@@ -1,0 +1,168 @@
+.grid-markup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.list-markup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    padding-top: 60px;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-markup {
+    padding-top: 60px;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-markup {
+    gap: 30px;
+  }
+}
+
+.card__wrap {
+  display: flex;
+}
+
+.card__image--container-wrap {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 294px;
+  height: 398px;
+  margin-right: 30px;
+
+  @media screen and (min-width: 1024px) {
+    width: 274px;
+  }
+}
+
+.card__image--extended {
+  object-fit: cover;
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+}
+
+.card__image--extended {
+  min-width: 294px;
+
+  @media screen and (min-width: 1024px) {
+    min-width: 274px;
+  }
+}
+
+.card__text-container--wrap {
+  width: 294px;
+  max-height: 400px;
+  overflow: hidden;
+
+  @media screen and (min-width: 1024px) {
+    width: 578px;
+  }
+}
+
+.card__title--extended {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1024px) {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.card__title--indent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title--wrap {
+  display: grid;
+  grid-template-columns: 110px auto;
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 120px auto;
+  }
+}
+
+.card__key {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8c8c8c;
+
+  margin-right: 40px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.card__value {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.card__subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  margin-bottom: 10px;
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.card__overview {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  color: #000000;
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

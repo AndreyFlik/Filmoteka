@@ -1,0 +1,36 @@
+<li class='card__wrap ' data-id={{id}}>
+    <div class='card__image--container-wrap'>
+        <img loading='lazy' class='card__image--extended' src={{poster}} alt='film poster' />
+    </div>
+    <div class="card__text-container--wrap">
+        <h2 class='card__title--extended'>{{title}}</h2>
+        <ul class='card__title--indent'>
+            <li class='card__title--wrap'>
+                <p class='card__key'>Vote / Votes</p>
+                <p class='card__value'>
+                    <span class='film__accent'>{{vote_average}}</span>/{{vote_count}}
+                </p>
+            </li>
+            <li class='card__title--wrap'>
+                <p class='card__key'>Popularity</p>
+                <p class='card__value'>{{popularity}}</p>
+            </li>
+            <li class='card__title--wrap'>
+                <p class='card__key'>Original Title</p>
+                <p class='card__value'>{{original_title}}</p>
+            </li>
+            <li class='card__title--wrap'>
+                <p class='card__key'>Genre</p>
+                <p class='card__value'>{{genresOfMovie}}</p>
+            </li>
+            <li class='card__title--wrap'>
+                <p class='card__key'>Year</p>
+                <p class='card__value'>{{releaseYear}}</p>
+            </li>
+            <li>
+                <h3 class='card__subtitle'>About</h3>
+                <p class='card__overview'>{{overview}}</p>
+            </li>
+        </ul>
+    </div>
+</li>

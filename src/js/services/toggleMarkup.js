@@ -1,3 +1,6 @@
+// import cardTpl from '../../templates/card.hbs';
+// import cardTplExtended from '../../templates/card-extended.hbs';
+
 const toggleMarkup = document.querySelector('.toggleMarkup');
 const galleryList = document.querySelector('.gallery-list');
 
@@ -20,12 +23,18 @@ function replaceMarkup(oldMarkup, newMarkup) {
   localStorage.setItem('markup', newMarkup);
 }
 
+// let finalMarkup = '';
+
 const localStorageMarkup = localStorage.getItem('markup', Markup.GRID);
 if (localStorageMarkup === Markup.LIST) {
   toggleMarkup.classList.toggle('active');
   galleryList.classList.add(Markup.LIST);
+  // finalMarkup = cardTplExtended;
 } else {
   galleryList.classList.add(Markup.GRID);
+  // finalMarkup = cardTpl;
 }
 
 toggleMarkup.addEventListener('click', changeMarkup);
+
+// export { finalMarkup };
