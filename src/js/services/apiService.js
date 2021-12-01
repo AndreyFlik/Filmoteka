@@ -22,6 +22,7 @@ let url = '';
 
 let searchMovies = `${BASE_URL}/search/movie`;
 let trendMovies = `${BASE_URL}/trending/movie/week`;
+let currentResults = [];
 
 const fetchGenre = async () => {
   JsLoadingOverlay.show(configs);
@@ -57,7 +58,7 @@ const fetchMovies = async (page = 1, query) => {
     };
   });
   JsLoadingOverlay.hide();
-
+  currentResults = data.results;
   return data;
 };
 
@@ -76,4 +77,4 @@ const fetchMovieById = async id => {
   }
 };
 
-export { fetchGenre, genresArr, fetchMovies, fetchMovieById };
+export { fetchGenre, genresArr, fetchMovies, fetchMovieById, currentResults };
