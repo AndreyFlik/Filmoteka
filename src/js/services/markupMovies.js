@@ -13,16 +13,16 @@ const makeMoviesMarkup = movies => {
         poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
       }
       if (Array.isArray(genresOfMovie)) {
-        const ids = genresOfMovie.map(id => {
-          return genresArr.filter(genre => {
-            if (genre.id === id) return genre.name;
-          });
-        });
-        if (ids.length > 2) ids.splice(2, ids.length - 1);
-        genresOfMovie = ids
-          .flatMap(id => id)
-          .map(genre => genre.name)
-          .join(', ');
+        const normalizedGenres = genresArr.reduce(
+          (acc, { id, name }) => ({ ...acc, [id]: name }),
+          {},
+        );
+        if (genresOfMovie.length > 2) genresOfMovie.splice(2, genresOfMovie.length - 1);
+        genresOfMovie = genre_ids.map(id => normalizedGenres[id]).join(', ');
+      } else {
+        const genresInSearch = genre_ids.split(', ');
+        genresOfMovie =
+          genresInSearch.length > 2 ? [genresInSearch[0], genresInSearch[1]].join(', ') : genre_ids;
       }
 
       return cardTpl({ title, poster, vote_average, genresOfMovie, releaseYear, id });

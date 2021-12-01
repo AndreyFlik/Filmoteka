@@ -53,9 +53,9 @@ function homeLibraryHeader() {
   refs.homeLink.classList.remove('navigation__link--active');
   refs.libraryLink.classList.add('navigation__link--active');
   refs.headerRefs.classList.add('bg-library');
-  refs.logoTextRefs.classList.add('is-hidden');
   refs.trendMovies.classList.add('is-hidden');
   refs.paginationRefs.classList.add('is-hidden');
+  openWatched();
 }
 
 function openWatched() {
