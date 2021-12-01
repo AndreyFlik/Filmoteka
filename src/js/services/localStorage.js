@@ -2,12 +2,16 @@ import refs from './refs';
 import { makeMoviesMarkup } from './markupMovies';
 
 const renderLib = (films, list) => {
-  list.innerHTML = makeMoviesMarkup(films);
+  if (films.length === 0) {
+    list.innerHTML = `<li class='myLib-empty'>Oops... it's empty here. Add some films!</li>`;
+  } else {
+    list.innerHTML = makeMoviesMarkup(films);
+  }
 };
 
 function addClass() {
   const filmRef = document.querySelector('.film');
-  const id = +filmRef.dataset.id;
+  const id = +filmRef?.dataset.id;
   keysWatched.forEach(film => {
     const btnRef = document.querySelector(`div[data-id="${film.id}"] button.film__button--watch`);
     if (film.id === id) {
@@ -78,6 +82,7 @@ function addOrRemoveClick(
 
     localStorage.setItem(key, JSON.stringify(arrayLocalData));
     list.querySelector(`li[data-id="${id}"]`)?.remove();
+    renderLib(arrayLocalData, list);
   } else if (
     !arrayLocalData.find(film => film.id === id) &&
     !secondArray.find(film => film.id === id) &&

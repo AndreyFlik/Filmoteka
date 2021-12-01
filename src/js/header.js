@@ -1,9 +1,8 @@
-// import { seachMovies } from './services/api';
 import refs from './services/refs.js';
 import { renderMovies } from './services/markupMovies';
-// import { getMovies } from './services/api';
 import { fetchMovies } from './services/apiService';
 import startPagination from './services/tuiPagination';
+
 const debounce = require('lodash.debounce');
 
 const ERROR_NOT_FOUND = 'Search result not successful. Enter the correct movie name.';
@@ -19,9 +18,7 @@ function getInputMovies(event) {
       startPagination(data.total_results);
       renderMovies(data.results);
     });
-    // return getMovies();
   }
-  // return seachMovies(event.target.value)
   return fetchMovies(startPage, event.target.value)
     .then(respons => {
       if (respons.total_results === 0) {
@@ -61,18 +58,18 @@ function homeLibraryHeader() {
   refs.paginationRefs.classList.add('is-hidden');
 }
 
-function openQueue() {
-  refs.queueBtn.classList.add('accent-color');
-  refs.watchedBtn.classList.remove('accent-color');
-}
-
 function openWatched() {
   refs.queueBtn.classList.remove('accent-color');
   refs.watchedBtn.classList.add('accent-color');
 }
 
+function openQueue() {
+  refs.queueBtn.classList.add('accent-color');
+  refs.watchedBtn.classList.remove('accent-color');
+}
+
 refs.homeLink.addEventListener('click', homeInputHeader);
 refs.libraryLink.addEventListener('click', homeLibraryHeader);
 
-refs.queueBtn.addEventListener('click', openQueue);
 refs.watchedBtn.addEventListener('click', openWatched);
+refs.queueBtn.addEventListener('click', openQueue);
