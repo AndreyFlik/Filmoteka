@@ -80,3 +80,17 @@ const onClickPlay = e => {
 refs.trendMovies.addEventListener('click', onClickGallery);
 refs.watched.addEventListener('click', onClickGallery);
 refs.queue.addEventListener('click', onClickGallery);
+
+function galleryWatched() {
+  refs.watched.classList.remove('is-hidden');
+  refs.queue.classList.add('is-hidden');
+}
+
+function galleryQueue() {
+  refs.watched.classList.add('is-hidden');
+  refs.queue.classList.remove('is-hidden');
+}
+
+refs.libraryLink.addEventListener('click', galleryWatched);
+refs.watchedBtn.addEventListener('click', galleryWatched);
+refs.queueBtn.addEventListener('click', galleryQueue);
