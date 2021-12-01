@@ -26,3 +26,22 @@ main {
     gap: 30px;
   }
 }
+
+.myLib {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  gap: 20px;
+}
+
+.myLib-empty {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  text-align: center;
+}
+
+.is-hidden {
+  display: none;
+}
