@@ -85,7 +85,6 @@ function addOrRemoveClick(
     renderLib(arrayLocalData, list);
   } else if (
     !arrayLocalData.find(film => film.id === id) &&
-    !secondArray.find(film => film.id === id) &&
     e.target.classList.contains(classBtn)
   ) {
     data.id = id;
