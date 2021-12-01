@@ -15,13 +15,14 @@ const refs = {
   headerRefs: document.querySelector('.header'),
   logoTextRefs: document.querySelector('.logo__text'),
   paginationRefs: document.querySelector('.pagination'),
-  modalBackdrop: document.querySelector('.backdrop'),
-  modalContent: document.querySelector('.modal__content'),
-  modalBtnClose: document.querySelector('.modal__close'),
   footerModalLink: document.querySelector('.footer-link'),
   watched: document.querySelector('#watched'),
   queue: document.querySelector('#queue-list'),
   libraryBtns: document.querySelector('.header__container'),
+
+  modalBackdrop: document.querySelector('.backdrop'),
+  modalContent: document.querySelector('.modal__content'),
+  modalBtnClose: document.querySelector('.modal__close'),
 };
 
 export default refs;

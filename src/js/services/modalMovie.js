@@ -1,11 +1,15 @@
 import movieTpl from '../../templates/film.hbs';
+import trailerTpl from '../../templates/trailer.hbs';
 import refs from './refs';
 import Modal from './modal';
 import { fetchMovieById } from './apiService';
 import emptyImg from '../../images/not_found.jpg';
+import sprite from '../../images/sprite.svg';
 import addClass from './localStorage';
 
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const TRAILER_BASE_URL = 'https://www.youtube.com/embed/';
+const iconYoutube = sprite + '#icon-youtube';
 const modal = new Modal(movieTpl);
 
 const onClickGallery = e => {
@@ -13,12 +17,10 @@ const onClickGallery = e => {
 
   if (!card) return;
 
-  renderModal(card).catch(err => console.log(err));
+  renderModalFilm(card.dataset.id).catch(err => console.log(err));
 };
 
-const renderModal = async card => {
-  const id = card.dataset.id;
-
+const renderModalFilm = async id => {
   const {
     poster_path,
     title,
@@ -29,15 +31,19 @@ const renderModal = async card => {
     genres,
     release_date,
     overview,
+    videos,
   } = await fetchMovieById(id);
 
   const poster = poster_path ? POSTER_BASE_URL + poster_path : emptyImg;
+  const trailer = videos.results[0].key;
   const genre = genres.map(item => item.name).join(', ');
   const year = new Date(release_date).getFullYear();
 
   const movieData = {
     id,
     poster,
+    iconYoutube,
+    trailer,
     title,
     vote: vote_average,
     votes: vote_count,
@@ -48,8 +54,27 @@ const renderModal = async card => {
     overview,
   };
 
-  modal.renderAndShow(movieData);
+  modal.setTemplate(movieTpl);
+  modal.render(movieData);
+  modal.show();
   addClass();
+
+  const btnPlay = document.querySelector('.modal .film__play');
+  btnPlay.addEventListener('click', onClickPlay);
+};
+
+const renderModalTrailer = async id => {
+  const { videos } = await fetchMovieById(id);
+  const path = TRAILER_BASE_URL + videos.results[0].key;
+
+  modal.setTemplate(trailerTpl);
+  modal.render({ path });
+};
+
+const onClickPlay = e => {
+  const film = e.target.closest('.film');
+  const id = film.dataset.id;
+  renderModalTrailer(id).catch(err => console.log(err));
 };
 
 refs.trendMovies.addEventListener('click', onClickGallery);
