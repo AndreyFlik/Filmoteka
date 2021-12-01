@@ -7,6 +7,7 @@ import './services/modalMovie';
 import startPagination from './services/tuiPagination';
 import './scrollUp';
 import { fetchGenre, fetchMovies } from './services/apiService';
+import './services/toggleMarkup';
 
 fetchGenre()
   .then(fetchMovies)
