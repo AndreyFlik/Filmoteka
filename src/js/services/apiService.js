@@ -63,8 +63,8 @@ const fetchMovies = async (page = 1, query) => {
 
 const fetchMovieById = async id => {
   JsLoadingOverlay.show(configs);
-  url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}`;
-  try {
+  url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=videos`;
+  https: try {
     const response = await fetch(url);
     const movie = await response.json();
     url = '';

@@ -2,7 +2,7 @@ import './services/localStorage';
 
 import './header';
 import './footer';
-import renderMovies from './services/markupMovies';
+import { renderMovies } from './services/markupMovies';
 import cardTpl from '../templates/card.hbs';
 import './services/modalMovie';
 import startPagination from './services/tuiPagination';

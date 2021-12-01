@@ -19,6 +19,9 @@ const refs = {
   modalContent: document.querySelector('.modal__content'),
   modalBtnClose: document.querySelector('.modal__close'),
   footerModalLink: document.querySelector('.footer-link'),
+  watched: document.querySelector('#watched'),
+  queue: document.querySelector('#queue-list'),
+  libraryBtns: document.querySelector('.header__container'),
 };
 
 export default refs;
