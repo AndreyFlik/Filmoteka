@@ -7,7 +7,7 @@ const renderLib = (films, list) => {
 
 function addClass() {
   const filmRef = document.querySelector('.film');
-  const id = +filmRef.dataset.id;
+  const id = +filmRef?.dataset.id;
   keysWatched.forEach(film => {
     const btnRef = document.querySelector(`div[data-id="${film.id}"] button.film__button--watch`);
     if (film.id === id) {
