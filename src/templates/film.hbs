@@ -1,5 +1,10 @@
 <div class='film' data-id={{id}}>
   <div class='film__image-wrapper'>
+    <button class='film__play' aria-label='play a trailer'>
+      <svg class='film__icon' width='42' height='42'>
+        <use href={{iconYoutube}}></use>
+      </svg>
+    </button>
     <img class='film__image' src={{poster}} alt='Film poster' />
   </div>
   <div class='film__data-wrapper'>
