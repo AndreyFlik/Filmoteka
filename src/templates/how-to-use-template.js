@@ -1,5 +1,3 @@
-// this is just an example
-
 import contentTpl from './film.hbs';
 const modal = document.querySelector('.modal__content');
 

@@ -1,10 +1,9 @@
-const themeBtnRef = document.querySelector('.theme__btn');
-const bodyRef = document.querySelector('body');
+import refs from './refs';
 
 const changeTheme = e => {
   if (e.currentTarget.tagName !== 'BUTTON') return;
-  bodyRef.classList.toggle('dark-theme');
-  if (bodyRef.classList.contains('dark-theme')) {
+  refs.bodyRef.classList.toggle('dark-theme');
+  if (refs.bodyRef.classList.contains('dark-theme')) {
     localStorage.setItem('theme', 'dark-theme');
   } else {
     localStorage.removeItem('theme');
@@ -12,9 +11,9 @@ const changeTheme = e => {
 };
 
 if (localStorage.getItem('theme') === 'dark-theme') {
-  bodyRef.classList.add('dark-theme');
+  refs.bodyRef.classList.add('dark-theme');
 } else {
-  bodyRef.classList.remove('dark-theme');
+  refs.bodyRef.classList.remove('dark-theme');
 }
 
-themeBtnRef.addEventListener('click', changeTheme);
+refs.themeBtnRef.addEventListener('click', changeTheme);

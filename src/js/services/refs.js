@@ -19,10 +19,12 @@ const refs = {
   watched: document.querySelector('#watched'),
   queue: document.querySelector('#queue-list'),
   libraryBtns: document.querySelector('.header__container'),
-
+  tuiBtn: document.querySelector('.tui-page-btn'),
   modalBackdrop: document.querySelector('.backdrop'),
   modalContent: document.querySelector('.modal__content'),
   modalBtnClose: document.querySelector('.modal__close'),
+  themeBtnRef: document.querySelector('.theme__btn'),
+  bodyRef: document.querySelector('body'),
 };
 
 export default refs;
