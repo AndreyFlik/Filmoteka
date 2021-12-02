@@ -1,7 +1,8 @@
 .backdrop {
   z-index: 0;
   position: fixed;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   top: 0;
   right: 0;
 

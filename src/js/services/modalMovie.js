@@ -35,7 +35,7 @@ const renderModalFilm = async id => {
   } = await fetchMovieById(id);
 
   const poster = poster_path ? POSTER_BASE_URL + poster_path : emptyImg;
-  const trailer = videos.results[0].key;
+  const trailer = videos.results[0]?.key;
   const genre = genres.map(item => item.name).join(', ');
   const year = new Date(release_date).getFullYear();
 
@@ -65,7 +65,9 @@ const renderModalFilm = async id => {
 
 const renderModalTrailer = async id => {
   const { videos } = await fetchMovieById(id);
-  const path = TRAILER_BASE_URL + videos.results[0].key;
+  let path = TRAILER_BASE_URL;
+  console.log(videos.results.length);
+  if (videos.results.length !== 0) path = TRAILER_BASE_URL + videos.results[0].key;
 
   modal.setTemplate(trailerTpl);
   modal.render({ path });
