@@ -2,9 +2,7 @@ import cardTpl from '../../templates/card.hbs';
 import cardTplExtended from '../../templates/card-extended.hbs';
 import { currentResults } from './apiService';
 import { renderMovies } from './markupMovies';
-
-const toggleMarkup = document.querySelector('.toggleMarkup');
-const galleryList = document.querySelector('.gallery-list');
+import refs from './refs';
 
 let finalMarkup = null;
 const Markup = {
@@ -13,8 +11,8 @@ const Markup = {
 };
 
 function changeMarkup() {
-  toggleMarkup.classList.toggle('active');
-  if (toggleMarkup.classList.contains('active')) {
+  refs.toggleMarkup.classList.toggle('active');
+  if (refs.toggleMarkup.classList.contains('active')) {
     finalMarkup = cardTplExtended; //сначала разметка
     replaceMarkup(Markup.GRID, Markup.LIST); //после замена класса
   } else {
@@ -24,24 +22,28 @@ function changeMarkup() {
 }
 
 function replaceMarkup(oldMarkup, newMarkup) {
-  galleryList.classList.add(newMarkup);
-  galleryList.classList.remove(oldMarkup);
+  refs.trendMovies.classList.add(newMarkup);
+  refs.trendMovies.classList.remove(oldMarkup);
   localStorage.setItem('markup', newMarkup);
   renderMovies(currentResults);
 }
 
 const localStorageMarkup = localStorage.getItem('markup', Markup.GRID);
 if (localStorageMarkup === Markup.LIST) {
-  toggleMarkup.classList.toggle('active');
-  galleryList.classList.add(Markup.LIST);
+  refs.toggleMarkup.classList.toggle('active');
+  refs.trendMovies.classList.add(Markup.LIST);
   finalMarkup = cardTplExtended;
 } else {
-  galleryList.classList.add(Markup.GRID);
+  refs.trendMovies.classList.add(Markup.GRID);
   finalMarkup = cardTpl;
 }
 
 if (window.innerWidth < 768) finalMarkup = cardTpl;
 
-toggleMarkup.addEventListener('click', changeMarkup);
+const changeFinalMarkup = markupFunc => {
+  finalMarkup = markupFunc;
+};
 
-export { finalMarkup };
+refs.toggleMarkup.addEventListener('click', changeMarkup);
+
+export { finalMarkup, changeFinalMarkup };
