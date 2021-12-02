@@ -9,6 +9,10 @@
   }
 }
 
+.tui-page-btn:not(:last-child) {
+  margin-right: 5px;
+}
+
 .tui-is-disabled {
   opacity: 0;
 }
@@ -34,4 +38,3 @@
     padding-bottom: 50px;
   }
 }
-
