@@ -38,3 +38,7 @@
     padding-bottom: 50px;
   }
 }
+#pagination .tui-pagination .tui-first-child.tui-is-selected,
+#pagination .tui-pagination .tui-last-child.tui-is-selected {
+  border: $footer-bg-color;
+}
