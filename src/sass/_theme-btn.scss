@@ -1,13 +1,24 @@
 .theme__btn {
-  display: block;
+  display: flex;
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: ($dark-theme-secon-bg-color);
   border-radius: 50%;
+  box-shadow: 0 1px 8px 3px rgb(165 165 165 / 60%);
   align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    right: 15px;
+  }
+  @media screen and (min-width: 1024px) {
+    right: 40px;
+  }
+
+  transition-duration: 500ms;
+  transition-timing-function: linear;
 }
 
 .theme__icon {
@@ -49,6 +60,44 @@
 
 .dark-theme .footer-link {
   background-color: ($dark-theme-prim-bg-color);
-  text-decoration: underline;
+
   color: ($footer-bg-color);
+}
+
+.dark-theme .film__title {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .film__value {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .film__overview {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .film__value--genres {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .film__value--year {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .film__subtitle {
+  color: $dark-theme-text-color;
+}
+
+.dark-theme .modal__close {
+  fill: $dark-theme-text-color;
+}
+
+.dark-theme .film__button {
+  color: $dark-theme-text-color;
+  opacity: 0.8;
+}
+
+.dark-theme .active-queue,
+.dark-theme .active-watched {
+  color: $white;
 }
