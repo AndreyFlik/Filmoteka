@@ -4,7 +4,9 @@ import { makeMoviesMarkup } from './markupMovies';
 const renderLib = (films, list) => {
   if (films.length === 0) {
     list.innerHTML = `<li class='myLib-empty'>Oops... it's empty here. Add some films!</li>`;
+    list.classList.add('myLibEmpty');
   } else {
+    list.classList.remove('myLibEmpty');
     list.innerHTML = makeMoviesMarkup(films);
   }
 };
@@ -85,7 +87,6 @@ function addOrRemoveClick(
     renderLib(arrayLocalData, list);
   } else if (
     !arrayLocalData.find(film => film.id === id) &&
-    !secondArray.find(film => film.id === id) &&
     e.target.classList.contains(classBtn)
   ) {
     data.id = id;
