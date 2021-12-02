@@ -26,6 +26,13 @@
   }
 }
 
+.film__image {
+  @media screen and (min-width: 1024px) {
+    max-height: 100%;
+    margin: 0 auto;
+  }
+}
+
 .film__play {
   position: absolute;
   top: 50%;
@@ -44,10 +51,6 @@
     transform: scale(1.3);
     transition: transform $anim-props;
   }
-}
-
-.film__image {
-  object-fit: cover;
 }
 
 .film__btn-list {
