@@ -6,6 +6,10 @@ main {
   flex-direction: column;
 }
 
+.gallery {
+  min-height: 100vh;
+}
+
 .gallery-list,
 .myLib {
   display: flex;
