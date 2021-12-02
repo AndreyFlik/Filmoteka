@@ -1,5 +1,7 @@
 import refs from './refs';
 import { makeMoviesMarkup } from './markupMovies';
+import { changeFinalMarkup } from './toggleMarkup';
+import cardTpl from '../../templates/card.hbs';
 
 const renderLib = (films, list) => {
   if (films.length === 0) {
@@ -31,6 +33,7 @@ function addClass() {
 }
 
 function onLibClick(e) {
+  changeFinalMarkup(cardTpl);
   if (
     e.target.classList.contains('header-button-watched') ||
     e.target.classList.contains('library')
@@ -73,7 +76,7 @@ function addOrRemoveClick(
 
   let data = {};
   const filmRef = e.target.closest('.film');
-  const id = +filmRef.dataset.id;
+  const id = +filmRef?.dataset.id;
 
   if (e.target.classList.contains(classActive)) {
     e.target.classList.remove(classActive);
