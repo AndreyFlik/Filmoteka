@@ -13,7 +13,7 @@ const iconYoutube = sprite + '#icon-youtube';
 const modal = new Modal(movieTpl);
 
 const onClickGallery = e => {
-  const card = e.target.closest('.card');
+  const card = e.target.closest('#card');
 
   if (!card) return;
 
