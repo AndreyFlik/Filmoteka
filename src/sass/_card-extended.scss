@@ -1,3 +1,13 @@
+.card__wrap {
+  cursor: pointer;
+  transition: transform $anim-props;
+
+  &:hover,
+  &:focus {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
 .grid-markup {
   display: flex;
   flex-wrap: wrap;
