@@ -1,7 +1,6 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import refs from './refs';
-// import { getMovies, seachMovies } from './api';
 import { fetchMovies } from './apiService';
 import { renderMovies } from './markupMovies';
 import { backToTop } from '../scrollUp';
@@ -44,15 +43,7 @@ function startPagination(totalItems = 20000, query = '') {
         renderMovies(data.results);
       })
       .catch(error => console.log(error.message));
-    // if (query) {
-    //   seachMovies(query, page)
-    // .then(data => {
-    //   renderMovies(data.results);
-    // })
-    //     .catch(error => console.log(error.message));
-    // } else {
-    //   getMovies(page);
-    // }
   });
 }
+
 export default startPagination;
