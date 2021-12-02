@@ -25,6 +25,7 @@ const refs = {
   modalBtnClose: document.querySelector('.modal__close'),
   themeBtnRef: document.querySelector('.theme__btn'),
   bodyRef: document.querySelector('body'),
+  toggleMarkup: document.querySelector('.toggleMarkup'),
 };
 
 export default refs;

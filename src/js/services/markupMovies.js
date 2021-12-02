@@ -1,6 +1,6 @@
 import emptyImg from '../../images/not_found.jpg';
 import refs from './refs';
-import { genresArr } from './apiService';
+import { normalizedGenres } from './apiService';
 import { finalMarkup } from './toggleMarkup';
 import normolixeText from './normolizeText';
 
@@ -26,10 +26,6 @@ const makeMoviesMarkup = movies => {
           poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
         }
         if (Array.isArray(genresOfMovie)) {
-          const normalizedGenres = genresArr.reduce(
-            (acc, { id, name }) => ({ ...acc, [id]: name }),
-            {},
-          );
           if (genresOfMovie.length > 2) genresOfMovie.splice(2, genresOfMovie.length - 1);
           genresOfMovie = genre_ids.map(id => normalizedGenres[id]).join(', ');
         } else {
