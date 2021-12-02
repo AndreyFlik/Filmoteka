@@ -1,7 +1,7 @@
 .theme__btn {
   display: block;
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -16,13 +16,38 @@
 
 .dark-theme main {
   background-color: ($dark-theme-prim-bg-color);
+  color: white;
 }
 
 .dark-theme .card__title {
   color: $dark-theme-text-color;
 }
 
+.dark-theme .card__key,
+.dark-theme .card__value,
+.dark-theme .card__overview {
+  color: white;
+}
+
+.dark-theme .film__data-wrapper,
+.dark-theme .film__overview,
+.dark-theme .film__subtitle,
+.dark-theme .film__value {
+  color: white;
+}
+
+.dark-theme .film__key {
+  color: $accent-color;
+}
+
 .dark-theme .modal__body {
+  background-color: #373540;
+}
+.dark-theme .tui-pagination .tui-page-btn {
+  border: 1px solid #757575;
+}
+
+.dark-theme .dark-theme .modal__body {
   background-color: ($dark-theme-prim-bg-color);
 }
 
