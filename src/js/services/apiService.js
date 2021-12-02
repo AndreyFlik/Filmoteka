@@ -17,7 +17,7 @@ const configs = {
   containerID: null,
 };
 
-let genresArr = [];
+let normalizedGenres = {};
 let url = '';
 
 let searchMovies = `${BASE_URL}/search/movie`;
@@ -30,7 +30,7 @@ const fetchGenre = async () => {
   const response = await fetch(url);
   const data = await response.json(); //[{}, {}, ..., {}]
   JsLoadingOverlay.hide();
-  genresArr = data.genres;
+  normalizedGenres = data.genres.reduce((acc, { id, name }) => ({ ...acc, [id]: name }), {});
 };
 
 const fetchMovies = async (page = 1, query) => {
@@ -44,16 +44,14 @@ const fetchMovies = async (page = 1, query) => {
   JsLoadingOverlay.show(configs);
   const response = await fetch(url);
   const data = await response.json(); // Получаем объект c полем results: [{}, {}, ..., {}]
-  // ["названия жарнов", ""]
+
   data.results = data.results.map(movie => {
     return {
       ...movie,
       genres: movie.genre_ids
         .slice(0, 2)
-        .map(id => {
-          const movieGenre = genresArr.find(genre => genre.id === id);
-          return movieGenre?.name || '';
-        })
+        .map(id => normalizedGenres[id] || '')
+        .filter(name => name)
         .join(', '),
     };
   });
@@ -77,4 +75,4 @@ const fetchMovieById = async id => {
   }
 };
 
-export { fetchGenre, genresArr, fetchMovies, fetchMovieById, currentResults };
+export { fetchGenre, normalizedGenres, fetchMovies, fetchMovieById, currentResults };
