@@ -53,9 +53,12 @@ function homeLibraryHeader() {
   refs.homeLink.classList.remove('navigation__link--active');
   refs.libraryLink.classList.add('navigation__link--active');
   refs.headerRefs.classList.add('bg-library');
-  refs.logoTextRefs.classList.add('is-hidden');
   refs.trendMovies.classList.add('is-hidden');
+  refs.trendMovies.classList.remove('list-markup');
+  refs.trendMovies.classList.remove('grid-markup');
   refs.paginationRefs.classList.add('is-hidden');
+  refs.toggleMarkup.classList.add('is-hidden');
+  openWatched();
 }
 
 function openWatched() {
