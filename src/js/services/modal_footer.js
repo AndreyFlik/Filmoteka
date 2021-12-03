@@ -34,3 +34,69 @@ const onFooterClick = () => {
 };
 
 refs.footerModalLink.addEventListener('click', onFooterClick);
+
+const ourTeamMates = [
+  {
+    img: '../../images/our-team/roman.jpg',
+    name: 'Roman Nikitenko',
+    role: 'frontend Developer',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/yelyzaveta.jpg',
+    name: 'Yelyzaveta Lukianova',
+    role: 'frontend Developer',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/alex.jpg',
+    name: 'Olexander Shepel',
+    role: 'frontend Developer',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/yurii.jpg',
+    name: 'Yuriy Hratson',
+    role: 'frontend Developer',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/andrii.jpg',
+    name: 'Andrii Yasentiuk',
+    role: 'frontend Developer',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/olexander.jpg',
+    name: 'Oleksandr Myrvoda',
+    role: 'Team Lead',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+  {
+    img: '../../images/our-team/valerian.jpg',
+    name: 'Valerian Rykov',
+    role: 'SCRUM master',
+    instaIcon: sprite + '#icon-instagram',
+    facebookIcon: sprite + '#icon-facebook',
+    linkedinIcon: sprite + '#icon-linkedin',
+    githubIcon: sprite + '#icon-github',
+  },
+];
